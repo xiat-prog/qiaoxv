@@ -22,12 +22,11 @@
                     </div>
                 </div>
                 <nav class="nav">
-                    <a href="#">首页</a>
-                    <a href="#">漫游武汉</a>
-                    <a href="#">桥梁地图</a>
-                    <a href="#">文创商品</a>
-                    <a href="#">精彩活动</a>
-                    <a href="#">旅游攻略</a>
+                    <a href="./index.html">首页</a>
+                    <a href="./video.html">精彩视频</a>
+                    <a href="./goods.html">文创商品</a>
+                    <a href="./activity.html">精彩活动</a>
+                    <a href="./feedback.html">问题反馈</a>
                 </nav>
                 <div class="header-right">
                     <div class="search-box">
@@ -73,50 +72,62 @@
                     <!-- 商品1 -->
                     <div class="goods-item">
                         <div class="goods-img">
-                            <img src="./images/shang pin/book2.jpg">
+                            <img src="./images/shang pin/book.jpg">
                             <span class="tag">人气推荐</span>
                         </div>
                         <h4>桥见江城立体书</h4>
                         <p class="goods-desc">复刻经典 · 致敬时代</p>
                         <div class="goods-bottom">
                             <span class="price">¥199</span>
-                            <button class="buy-btn">立即购买</button>
+                            <button class="buying-buy-btn card-buy-btn"
+                                    data-img="./images/shang pin/book.jpg"
+                                    data-title="桥见江城立体书"
+                                    data-price="199">立即购买</button>
                         </div>
                     </div>
                     <!-- 商品2 -->
                     <div class="goods-item">
                         <div class="goods-img">
-                            <img src="./images/shang pin/wallet.jpeg">
+                            <img src="./images/shang pin/new swim cup.jpg">
                         </div>
-                        <h4>桥梁主题钱包 长江一桥</h4>
-                        <p class="goods-desc">桥韵人情 · 精神延续</p>
+                        <h4>桥梁主题水杯：夏日泳池款</h4>
+                        <p class="goods-desc">清爽可爱 · 夏日限定</p>
                         <div class="goods-bottom">
                             <span class="price">¥50</span>
-                            <button class="buy-btn">立即购买</button>
+                            <button class="buying-buy-btn card-buy-btn"
+                                    data-img="./images/shang pin/new swim cup.jpg"
+                                    data-title="桥梁主题水杯：夏日泳池款"
+                                    data-price="50">立即购买</button>
                         </div>
                     </div>
                     <!-- 商品3 -->
                     <div class="goods-item">
                         <div class="goods-img">
-                            <img src="./images/shang pin/black fan.jpeg">
+                            <img src="./images/shang pin/new blue cup .jpg">
                         </div>
-                        <h4>桥梁主题手持风扇 长江一桥</h4>
-                        <p class="goods-desc">清凉实用 · 文化悠扬</p>
+                        <h4>桥梁主题水杯：保寿桥</h4>
+                        <p class="goods-desc">一桥一礼  传承古韵</p>
                         <div class="goods-bottom">
-                            <span class="price">¥59</span>
-                            <button class="buy-btn">立即购买</button>
+                            <span class="price">¥29</span>
+                            <button class="buying-buy-btn card-buy-btn"
+                                    data-img="./images/shang pin/new blue cup .jpg"
+                                    data-title="桥梁主题水杯：保寿桥"
+                                    data-price="29">立即购买</button>
                         </div>
                     </div>
                     <!-- 商品4 -->
                     <div class="goods-item">
                         <div class="goods-img">
-                            <img src="./images/shang pin/black t-shirt.jpeg">
+                            <img src="./images/shang pin/new blue coaster.jpg">
                         </div>
-                        <h4>桥梁主题服装 保寿桥</h4>
-                        <p class="goods-desc">一桥一礼 · 传承古韵</p>
+                        <h4>桥梁主题水杯垫：保守桥</h4>
+                        <p class="goods-desc">实用美观 · 桥韵悠扬</p>
                         <div class="goods-bottom">
-                            <span class="price">¥99</span>
-                            <button class="buy-btn">立即购买</button>
+                            <span class="price">¥19.9</span>
+                            <button class="buying-buy-btn card-buy-btn"
+                                    data-img="./images/shang pin/new blue coaster.jpg"
+                                    data-title="桥梁主题水杯垫：保守桥"
+                                    data-price="19.9">立即购买</button>
                         </div>
                     </div>
                 </div>
@@ -136,16 +147,26 @@
                 </div>
                 <div class="video-card">
                     <div class="video-box">
-                        <img src="./images/video/jiang qiao.png" alt="视频封面">
-                        <div class="play-circle">
-                            <div><?xml version="1.0" encoding="UTF-8"?><svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 24V11.8756L25.5 17.9378L36 24L25.5 30.0622L15 36.1244V24Z" fill="none" stroke="#245899" stroke-width="4" stroke-linejoin="round"/></svg>
+                        <!-- 新增video，放在最底层，封面用poster -->
+                        <video id="mainVideo" poster="./images/video/jiang qiao.png">
+                            <source src="./images/video/test.mp4" type="video/mp4">
+                            浏览器不支持视频播放
+                        </video>
+
+                        <!-- 原有中间播放圆圈 play-circle 保留不动 -->
+                        <div class="play-circle" id="centerPlayCircle">
+                            <div>
+                                <svg width="38" height="38" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 24V11.8756L25.5 17.9378L36 24L25.5 30.0622L15 36.1244V24Z" fill="none" stroke="#245899" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
                             </div>
                         </div>
+
+                        <!-- 原有底部进度条区域 video-progress 保留原有class -->
                         <div class="video-progress">
-                            <span class="time">0:00 / 02:36</span>
-                            <div class="progress-bar">
-                                <div class="progress"></div>
+                            <span class="time" id="timeText">0:00 / 02:36</span>
+                            <div class="progress-bar" id="progressBarWrap">
+                                <div class="progress" id="progressInner"></div>
                             </div>
                             <span class="hd">HD</span>
                             <span class="fullscreen">⛶</span>
@@ -156,26 +177,27 @@
                         <p>从长江大桥之上，俯瞰英雄的城市。江水奔流，桥梁飞架，高楼林立，历史与现代在此交汇，谱写着新时代的武汉篇章。</p>
                         <div class="video-stats">
                             <span class="view-item">
-                                <?xml version="1.0" encoding="UTF-8"?><svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M24 36C35.0457 36 44 24 44 24C44 24 35.0457 12 24 12C12.9543 12 4 24 4 24C4 24 12.9543 36 24 36Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/>
-                                <path d="M24 29C26.7614 29 29 26.7614 29 24C29 21.2386 26.7614 19 24 19C21.2386 19 19 21.2386 19 24C19 26.7614 21.2386 29 24 29Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round"/>
+                                <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 36C35.0457 36 44 24 44 24C44 24 35.0457 12 24 12C12.9543 12 4 24 4 24C4 24 12.9543 36 24 36Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round" />
+                                <path d="M24 29C26.7614 29 29 26.7614 29 24C29 21.2386 26.7614 19 24 19C21.2386 19 19 21.2386 19 24C19 26.7614 21.2386 29 24 29Z" fill="none" stroke="#333" stroke-width="4" stroke-linejoin="round" />
                                 </svg> 12.6万
                             </span>
                             <span class="view-item">
-                                <?xml version="1.0" encoding="UTF-8"?><svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 8C8.92487 8 4 12.9249 4 19C4 30 17 40 24 42.3262C31 40 44 30 44 19C44 12.9249 39.0751 8 33 8C29.2797 8 25.9907 9.8469 24 12.6738C22.0093 9.8469 18.7203 8 15 8Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                 1.2万
+                                <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 8C8.92487 8 4 12.9249 4 19C4 30 17 40 24 42.3262C31 40 44 30 44 19C44 12.9249 39.0751 8 33 8C29.2797 8 25.9907 9.8469 24 12.6738C22.0093 9.8469 18.7203 8 15 8Z" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg> 1.2万
                             </span>
                             <span class="view-item">
-                                <?xml version="1.0" encoding="UTF-8"?><svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M42 38V42L6 42L6 38" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 6L40 16L30 26" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M40 16C20 16 6 19 6 32" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="20" height="20" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M42 38V42L6 42L6 38" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M30 6L40 16L30 26" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M40 16C20 16 6 19 6 32" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg> 分享
                             </span>
                         </div>
                     </div>
                 </div>
             </section>
+
 
             <!-- 右侧：热门活动 -->
             <section class="card-block card-right">
@@ -221,5 +243,226 @@
             </div>
         </footer>
     </div>
+    <!--商品购买弹窗遮罩-->
+    <div class="goods-modal-mask" id="goodsModalMask">
+        <div class="goods-pay-modal">
+            <span class="goods-modal-close" id="goodsModalClose">×</span>
+            <div class="goods-modal-left">
+                <img id="goodsModalImg" src="./images/shang pin/book2.jpg" alt="商品图">
+            </div>
+            <div class="goods-modal-right">
+                <h3 class="goods-modal-title">桥见江城立体书</h3>
+                <div class="goods-modal-price">¥<span id="goodsModalPrice">199</span></div>
+
+                <div class="goods-modal-row" id="specWrap">
+                    <label>选择规格</label>
+                    <div class="goods-spec-btns">
+                        <button class="goods-spec-btn active" data-price="199">标准版</button>
+                        <button class="goods-spec-btn" data-price="269">珍藏版</button>
+                    </div>
+                </div>
+
+                <div class="goods-modal-row">
+                    <label>购买数量</label>
+                    <div class="goods-num-select">
+                        <button class="goods-num-minus">-</button>
+                        <span class="goods-num-show">1</span>
+                        <button class="goods-num-plus">+</button>
+                    </div>
+                </div>
+
+                <div class="goods-modal-btn-group">
+                    <button class="goods-modal-buy">立即购买</button>
+                    <button class="goods-modal-cart">加入购物车</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const mainVideo = document.getElementById('mainVideo');
+        const centerPlayCircle = document.getElementById('centerPlayCircle');
+        const timeText = document.getElementById('timeText');
+        const progressBarWrap = document.getElementById('progressBarWrap');
+        const progressInner = document.getElementById('progressInner');
+
+        // 时间格式化：秒 → 分:秒
+        function formatSecond(sec){
+            let m = Math.floor(sec / 60);
+            let s = Math.floor(sec % 60);
+            s = s < 10 ? '0' + s : s;
+            return `${m}:${s}`;
+        }
+
+        // 播放暂停切换
+        function togglePlay(){
+            if(mainVideo.paused){
+                mainVideo.play();
+            }else{
+                mainVideo.pause();
+            }
+        }
+
+        // 点击中间圆形播放按钮
+        centerPlayCircle.addEventListener('click', togglePlay);
+
+        // 视频加载完毕拿到总时长
+        mainVideo.addEventListener('loadedmetadata', function(){
+            const total = formatSecond(mainVideo.duration);
+            timeText.innerText = `0:00 / ${total}`;
+        });
+
+        // 播放中：更新进度、时间，隐藏中间播放圈
+        mainVideo.addEventListener('timeupdate', function(){
+            const cur = mainVideo.currentTime;
+            const total = mainVideo.duration;
+            const per = cur / total;
+            progressInner.style.width = per * 100 + '%';
+            timeText.innerText = `${formatSecond(cur)} / ${formatSecond(total)}`;
+        });
+
+        // play事件：隐藏中间播放圆圈
+        mainVideo.addEventListener('play',function(){
+            centerPlayCircle.style.opacity = '0';
+        });
+        // pause事件：显示中间播放圆圈
+        mainVideo.addEventListener('pause',function(){
+            centerPlayCircle.style.opacity = '1';
+        });
+
+        // 点击进度条跳转视频位置
+        progressBarWrap.addEventListener('click',function(e){
+            const rect = progressBarWrap.getBoundingClientRect();
+            const offsetX = e.clientX - rect.left;
+            const rate = offsetX / rect.width;
+            mainVideo.currentTime = rate * mainVideo.duration;
+        });
+
+
+        // ------商品购买界面--------
+         //========商品详情购买弹窗逻辑========
+        const goodsModalMask = document.getElementById('goodsModalMask');
+        const goodsModalClose = document.getElementById('goodsModalClose');
+        const openGoodsModalBtn = document.getElementById('openGoodsModalBtn');
+        const specWrap = document.getElementById('specWrap'); //规格容器
+
+        const goodsModalImg = document.getElementById('goodsModalImg');
+        const goodsModalTitle = document.querySelector('.goods-modal-title');
+        const goodsModalPrice = document.getElementById('goodsModalPrice');
+
+        const goodsSpecBtns = document.querySelectorAll('.goods-spec-btn');
+        const goodsNumMinus = document.querySelector('.goods-num-minus');
+        const goodsNumPlus = document.querySelector('.goods-num-plus');
+        const goodsNumShow = document.querySelector('.goods-num-show');
+
+        const goodsModalBuy = document.querySelector('.goods-modal-buy');
+        const goodsModalCart = document.querySelector('.goods-modal-cart');
+
+
+        /**
+         * @param {string} img 图片地址
+         * @param {string} title 商品标题
+         * @param {string} price 价格
+         * @param {boolean} hasSpec 是否拥有规格（详情页true，小卡片false）
+         */
+        function openGoodsModal(img,title,price,hasSpec=true){
+            goodsModalImg.src = img;
+            goodsModalTitle.innerText = title;
+            goodsModalPrice.innerText = price;
+            goodsNumShow.innerText = "1";
+
+            if(hasSpec){
+                //详情页：显示规格，同步页面选中规格
+                specWrap.classList.remove('hide-spec');
+                const activeSpec = document.querySelector('.spec-btn.active');
+                goodsSpecBtns.forEach(b=>b.classList.remove('active'));
+                if(activeSpec.innerText === "标准版"){
+                    goodsSpecBtns[0].classList.add('active');
+                    goodsModalPrice.innerText = goodsSpecBtns[0].dataset.price;
+                }else{
+                    goodsSpecBtns[1].classList.add('active');
+                    goodsModalPrice.innerText = goodsSpecBtns[1].dataset.price;
+                }
+            }else{
+                //下方卡片商品：隐藏规格模块
+                specWrap.classList.add('hide-spec');
+            }
+            goodsModalMask.style.display = 'flex';
+        }
+
+        //关闭弹窗
+        function closeGoodsModal(){
+            goodsModalMask.style.display = 'none';
+            //关闭弹窗恢复规格行显示
+            specWrap.classList.remove('hide-spec');
+        }
+
+
+        //下方推荐卡片所有购买按钮（无规格）
+        document.querySelectorAll('.card-buy-btn').forEach(btn=>{
+            btn.addEventListener('click',function(){
+                const img = this.dataset.img;
+                const title = this.dataset.title;
+                const price = this.dataset.price;
+                openGoodsModal(img, title, price, false);
+            })
+        })
+
+        //点击×关闭
+        goodsModalClose.addEventListener('click', closeGoodsModal);
+        //点击遮罩背景关闭弹窗
+        goodsModalMask.addEventListener('click',function(e){
+            if(e.target === goodsModalMask){
+                closeGoodsModal();
+            }
+        })
+
+        //弹窗内规格切换（只有详情页会显示）
+        goodsSpecBtns.forEach(btn=>{
+            btn.addEventListener('click',function(){
+                goodsSpecBtns.forEach(b=>b.classList.remove('active'));
+                this.classList.add('active');
+                goodsModalPrice.innerText = this.dataset.price;
+            })
+        })
+
+        //数量加减
+        goodsNumMinus.addEventListener('click',function(){
+            let num = parseInt(goodsNumShow.innerText);
+            if(num >1){
+                num--;
+                goodsNumShow.innerText = num;
+            }
+        })
+        goodsNumPlus.addEventListener('click',function(){
+            let num = parseInt(goodsNumShow.innerText);
+            num++;
+            goodsNumShow.innerText = num;
+        })
+
+        //立即购买按钮（模拟）
+        goodsModalBuy.addEventListener('click',function(){
+            const count = goodsNumShow.innerText;
+            const price = goodsModalPrice.innerText;
+            alert(`立即购买，数量：${count}，单价：¥${price}`);
+            closeGoodsModal();
+        })
+
+        //加入购物车按钮（模拟）
+        goodsModalCart.addEventListener('click',function(){
+            const count = goodsNumShow.innerText;
+            alert(`成功加入购物车，购买数量：${count}`);
+            closeGoodsModal();
+        })
+        //所有card-buy-btn
+        document.querySelectorAll('.card-buy-btn').forEach(btn=>{
+            btn.addEventListener('click',function(){
+                const img = this.dataset.img;
+                const title = this.dataset.title;
+                const price = this.dataset.price;
+                openGoodsModal(img, title, price, false);
+            })
+        })
+
+    </script>
 </body>
 </html>
